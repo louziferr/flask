@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Data Visualization
+{% endblock %}
+
+{% block content %}
+<table class="table">
+    <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Second Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Study Program</th>
+    </tr>
+    {% for answer in answers %}
+    <tr>
+        {% for entry in answer %}
+            <th scope="col">{{ entry }}</th>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Hanging!</h1>
+<h2>You lost!</h2>
+<a href="{{ url_for('index') }}">
+  <button type="button" class="btn btn-primary">Restart Game</button>
+</a>
+{% endblock %}

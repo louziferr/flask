@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Oh yeah!</h1>
+<h2>You won!</h2>
+
+{% for char in current_word %}
+<button type="button" class="btn btn-dark">{{ char }}</button>
+{% endfor %}
+<h4>Play again?</h4>
+<a href="{{ url_for('index') }}">
+  <button type="button" class="btn btn-primary">Restart Game</button>
+</a>
+{% endblock %}

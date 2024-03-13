@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>HANGMAN</h1>
+{% for char in hangman.current_word %}
+<button type="button" class="btn btn-dark">{{ char }}</button>
+{% endfor %}
+
+<h4>Guessed Letters</h4>
+{% for letter in hangman.guessed %}
+<button type="button" class="btn btn-light">{{ letter }}</button>
+{% endfor %}
+
+<div class="container-sm">
+  <form action="{{ url_for('game') }}" method="post">
+    <div class="form-group" style="width: 30%; padding: 25px">
+      <label for="letter">Guess Letter</label>
+      <input type="string" name="letter" class="form-control" placeholder="letter">
+    </div>
+    <button type="submit" class="btn btn-primary">Guess</button>
+  </form>
+</div>
+
+<h3>Lives: {{ hangman.lives }}</h3>
+<a href="{{ url_for('index') }}">
+  <button type="button" class="btn btn-secondary btn-sm">Restart Game</button>
+</a>
+{% endblock %}
