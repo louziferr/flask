@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<table class="table">
+    <tr>
+        <th scope="col">Account Number</th>
+        <th scope="col">Name</th>
+        <th scope="col">Balance</th>
+    </tr>
+    {% for account in bank.accounts %}
+    <tr>
+        <th scope="col">{{ account }}</th>
+        <th scope="col">{{ bank.accounts[account]["name"] }}</th>
+        <th scope="col">{{ bank.accounts[account]["balance"] }}</th>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

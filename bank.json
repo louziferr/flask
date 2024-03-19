@@ -1,0 +1,21 @@
+{
+    "333222": {
+        "name": "Luzie Ahrens",
+        "balance": 2284.09,
+        "history": [
+            [
+                "deposit",
+                "2304.32"
+            ],
+            [
+                "withdraw",
+                "20.23"
+            ]
+        ]
+    },
+    "221334": {
+        "name": "Paula Ahrens",
+        "balance": 0,
+        "history": []
+    }
+}
