@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container-sm">
+    <form action="{{ url_for('history') }}" method="post">
+        <div class="form-group" style="width: 30%; padding: 25px">
+            <label for="letter">Account Number</label>
+            <input type="string" name="account_number" class="form-control" placeholder="123456">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<table class="table">
+    <tr>
+        <th scope="col">Type</th>
+        <th scope="col">Amount</th>
+    </tr>
+    {% if acc_num in bank.accounts %}
+    {% for entry in bank.accounts[acc_num]["history"] %}
+    <tr>
+        <th scope="col">{{ entry[0] }}</th>
+        <th scope="col">{{ entry[1] }}</th>
+    </tr>
+    {% endfor %}
+    {% endif %}
+</table>
+{% endblock %}

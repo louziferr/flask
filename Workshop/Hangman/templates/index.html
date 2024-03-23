@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Hangman</h1>
+
+<a href="{{ url_for('game') }}">
+    <button type="button" class="btn btn-primary">Start Game</button>
+</a>
+{% endblock %}

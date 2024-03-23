@@ -15,6 +15,20 @@
     },
     "221334": {
         "name": "Paula Ahrens",
+        "balance": 5.0,
+        "history": [
+            [
+                "deposit",
+                "10"
+            ],
+            [
+                "withdraw",
+                "5"
+            ]
+        ]
+    },
+    "342232": {
+        "name": "Mika Ahrens",
         "balance": 0,
         "history": []
     }

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-sm">
+    <form action="{{ url_for('account') }}" method="post">
+        <div class="form-group" style="width: 30%; padding: 25px">
+            <label for="letter">New Account</label>
+            <input type="string" name="account_number" class="form-control" placeholder="123456">
+            <input type="string" name="name" class="form-control" placeholder="Name">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}
